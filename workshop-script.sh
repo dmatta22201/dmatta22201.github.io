@@ -8,7 +8,7 @@ tar -xzf latest.tar.gz
 
 # Grab the workshop wordpress configuration and reset the database from localhost to our RDS endpoint.
 wget -O ~/wordpress/wp-config.php https://raw.githubusercontent.com/dmatta22201/dmatta22201.github.io/master/s-wp-config2468.php
-sed -i -e 's/localhost/$MYSQL_HOST/' ~/wordpress/wp-config.php
+sed -i -e "s/localhost/$MYSQL_HOST/" ~/wordpress/wp-config.php
 
 # Deploy Wordpress
 sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2

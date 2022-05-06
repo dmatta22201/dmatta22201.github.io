@@ -1,7 +1,5 @@
 #!/bin/bash
-sudo yum update -y
-sudo yum install -y httpd
-sudo yum install -y mysql
+sudo yum install -y httpd mysql
 mysql --user=admin --password=workshop123 -e "CREATE USER 'wordpress' IDENTIFIED BY 'wordpress-pass';"
 mysql --user=admin --password=workshop123 -e "GRANT ALL PRIVILEGES ON wordpress.* TO wordpress;"
 mysql --user=admin --password=workshop123 -e "FLUSH PRIVILEGES;"
@@ -14,7 +12,7 @@ sed -i -e 's/localhost/$MYSQL_HOST/' ~/wordpress/wp-config.php
 
 # Deploy Wordpress
 sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
-sudo yum install php-xml 
+sudo yum install -y php-xml 
 cd /home/ec2-user
 sudo cp -r wordpress/* /var/www/html/
 sudo chown -R apache:apache /var/www/html

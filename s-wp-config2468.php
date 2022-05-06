@@ -81,6 +81,8 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+/** Allows caching to S3 using an EC2 IAM role instead of access and secret keys **/
+define( 'AS3CF_AWS_USE_EC2_IAM_ROLE', true );
 
 
 /* That's all, stop editing! Happy publishing. */

@@ -84,6 +84,11 @@ define( 'WP_DEBUG', false );
 /** Allows caching to S3 using an EC2 IAM role instead of access and secret keys **/
 define( 'AS3CF_AWS_USE_EC2_IAM_ROLE', true );
 
+/** to allow 'W3TC' plugin write the configuration data into DB */
+define( 'W3TC_CONFIG_DATABASE', true );
+
+/** to allow https in WordPress, will be used in lab 2/
+$_SERVER['HTTPS'] = 'on';
 
 /* That's all, stop editing! Happy publishing. */
 
@@ -94,9 +99,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
-
-/** to allow 'W3TC' plugin write the configuration data into DB */
-define( 'W3TC_CONFIG_DATABASE', true );
-/** to allow https in WordPress, will be used in lab 2/
-$_SERVER['HTTPS'] = 'on';
-

@@ -88,7 +88,7 @@ define( 'AS3CF_AWS_USE_EC2_IAM_ROLE', true );
 define( 'W3TC_CONFIG_DATABASE', true );
 
 /** to allow https in WordPress, will be used in lab 2 */
-$_SERVER['HTTPS'] = 'on';
+/* $_SERVER['HTTPS'] = 'on'; */
 
 /* That's all, stop editing! Happy publishing. */
 

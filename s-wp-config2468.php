@@ -87,6 +87,10 @@ define( 'AS3CF_AWS_USE_EC2_IAM_ROLE', true );
 /** to allow 'W3TC' plugin write the configuration data into DB */
 define( 'W3TC_CONFIG_DATABASE', true );
 
+/** Set the HOME and SITEURL to be the local site during configuration **/
+define('WP_HOME','//'. $_SERVER['SERVER_NAME']);
+define('WP_SITEURL','//'. $_SERVER['SERVER_NAME']);
+
 /** to allow https in WordPress, will be used in lab 2 */
 /* $_SERVER['HTTPS'] = 'on'; */
 if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)

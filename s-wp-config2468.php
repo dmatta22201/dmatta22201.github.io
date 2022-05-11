@@ -89,6 +89,8 @@ define( 'W3TC_CONFIG_DATABASE', true );
 
 /** to allow https in WordPress, will be used in lab 2 */
 /* $_SERVER['HTTPS'] = 'on'; */
+if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)
+       $_SERVER['HTTPS']='on';
 
 /* That's all, stop editing! Happy publishing. */
 
